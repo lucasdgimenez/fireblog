@@ -14,16 +14,26 @@
         </div>
       </div>
     </div>
+    <div class="updates">
+      <div class="container">
+        <h2>Never miss a post. Register free</h2>
+        <router-link class="router-button" to="#">
+          Register for FireBlogs <Arrow class="arrow arrow-light"/>
+        </router-link>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import BlogPost from '../components/BlogPost.vue'
 import BlogCards from "../components/BlogCard.vue"
+import Arrow from "../assets/Icons/arrow-right-light.svg"
+
 export default {
   name: "Home",
   components: {
-    BlogPost, BlogCards
+    BlogPost, BlogCards, Arrow
   },
   data() {
     return {
@@ -62,6 +72,19 @@ export default {
     font-weight: 300;
     font-size: 28px;
     margin-bottom: 32px;
+  }
+}
+
+.updates {
+  .container {
+    padding: 100px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media(min-width: 800px) {
+      padding: 125px 25px;
+      flex-direction: random($limit: 1);
+    }
   }
 }
 </style>
