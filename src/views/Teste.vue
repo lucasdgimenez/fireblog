@@ -18,6 +18,11 @@
         
       </section>
     </div>
+
+    <div style="background: green; color: white;">
+      
+  
+    </div>
   
   </div>
 </template>
@@ -27,6 +32,7 @@ export default {
   name: "Teste",
   data() {
     return {
+      radioGroup: 1,
       produtosTela: [],
       filtroOrdem: "",
       arrayTeste: [],

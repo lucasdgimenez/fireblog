@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Teste from "../views/Teste.vue";
+import Blogs from "../views/Blogs.vue";
 
 Vue.use(VueRouter);
 
@@ -12,6 +13,11 @@ const routes = [
     component: Home,
   },
   {
+    path: "/blogs",
+    name: "blogs",
+    component: Blogs,
+  },
+  {
     path: "/teste",
     name: "teste",
     component: Teste,
@@ -19,7 +25,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes,
 });
