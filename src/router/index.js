@@ -14,18 +14,18 @@ const routes = [
   },
   {
     path: "/blogs",
-    name: "blogs",
+    name: "Blogs",
     component: Blogs,
   },
   {
     path: "/teste",
-    name: "teste",
+    name: "Teste",
     component: Teste,
   },
 ];
 
 const router = new VueRouter({
-  mode: "hash",
+  mode: "history",
   base: process.env.BASE_URL,
   routes,
 });

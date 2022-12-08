@@ -6,16 +6,16 @@
         <h2 v-else>{{post.title}}</h2>
         <p v-if="post.welcomeScreen">{{post.blogPost}}</p>
         <p class="content-preview" v-else>{{post.blogHTML}}</p>
-        <router-link 
+        <!--<router-link 
           class="link link-light" 
           v-if="post.welcomeScreen" 
           to="#"
         >
           Login/Register<Arrow class="arrow arrow-light"/>
-        </router-link>
+        </router-link>          v-else
+-->
         <router-link 
           class="link" 
-          v-else
           to="#"
         >
           View the Post<Arrow class="arrow"/>
