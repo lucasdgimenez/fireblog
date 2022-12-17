@@ -100,6 +100,16 @@ export default {
           width: 100%;
           border: none;
           background-color: #f2f7f6;
+          padding: 14px 14px 14px 30px;
+          height: 14px;
+          &:focus {
+            outline: none;
+          }
+        }
+        .icon {
+          width: 12px;
+          position: absolute;
+          left: 6px;
         }
       }
     }
@@ -115,6 +125,19 @@ export default {
 
       &:hover {
         border-color: #303030;
+      }
+    }
+
+    .angle {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      transform: rotate2(3deg);
+      width: 60px;
+      right: -30px;
+      height: 101%;
+      @media(min-width: 900px) {
+        display: initial;
       }
     }
   }
