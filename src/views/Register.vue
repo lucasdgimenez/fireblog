@@ -6,7 +6,7 @@
           Register
         </router-link>
       </p>
-        <h2>Login to FireBlogs</h2>
+        <h2>Create Your FireBlog Account</h2>
         <div class="inputs">
           <div class="input">
             <input type="text" placeholder="First Name" v-model="firstName">
@@ -51,9 +51,22 @@ import user from "../assets/Icons/user-alt-light.svg"
 export default {
   name: 'Register',
   components:{email, password, user},
+  data() {
+    return {
+      firstName: null,
+      lastName: null,
+      username: null,
+      email: null,
+      password: null
+    }
+  }
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.register {
+  h2 {
+    max-width: 350px;
+  }
+}
 </style>

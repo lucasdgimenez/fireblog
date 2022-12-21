@@ -18,7 +18,7 @@
             <password class="icon"/>
           </div> 
         </div>
-        <router-link class="forgot-password" :to="{name: 'ForgotPassword'}">
+        <router-link class="forgot-password" :to="{name: 'ForgetPassword'}">
           Forgot your password?
         </router-link>
         <button>Sign In</button>
@@ -132,7 +132,7 @@ export default {
       display: none;
       position: absolute;
       background-color: #fff;
-      transform: rotate2(3deg);
+      transform: rotateZ(3deg);
       width: 60px;
       right: -30px;
       height: 101%;
