@@ -32,6 +32,12 @@ export default {
       modalActive: false,
       modalmessage: ""
     }
+  },
+  methods:{
+    closeModal() {
+      this.modalActive = !this.modalActive
+      this.email = ""
+    }
   }
 }
 </script>
