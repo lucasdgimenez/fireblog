@@ -35,7 +35,7 @@
         <div v-show="error" class="error">{{this.errorMsg}}</div>
         </div>
         
-        <button>Sign Up</button>
+        <button @click.prevent="register">Sign Up</button>
 
         <div class="angle"></div>
     </form>
@@ -56,11 +56,11 @@ export default {
   components:{email, password, user},
   data() {
     return {
-      firstName: null,
-      lastName: null,
-      username: null,
-      email: null,
-      password: null,
+      firstName: "",
+      lastName: "",
+      username: "",
+      email: "",
+      password: "",
       error: false,
       errorMsg: ""
     }
@@ -68,10 +68,10 @@ export default {
   methods: {
     async register() {
       if (
-        this.firstName !== "null" ||
-        this.lastName !== "null" ||
-        this.username !== "null" ||
-        this.email !== "null" ||
+        this.firstName !== "null" &&
+        this.lastName !== "null" &&
+        this.username !== "null" &&
+        this.email !== "null" &&
         this.password !== "null"
       ) {
         this.error = false
