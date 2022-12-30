@@ -47,8 +47,9 @@
 import email from "../assets/Icons/envelope-regular.svg"
 import password from "../assets/Icons/lock-alt-solid.svg"
 import user from "../assets/Icons/user-alt-light.svg"
-import firebase from "firebase/app"
-import "firebase/auth"
+import firebase from "firebase/compat/app"
+import "firebase/compat/auth"
+//import 'firebase/compat/firestore'
 import db from "../firebase/firebaseInit"
 
 export default {
@@ -68,11 +69,11 @@ export default {
   methods: {
     async register() {
       if (
-        this.firstName !== "null" &&
-        this.lastName !== "null" &&
-        this.username !== "null" &&
-        this.email !== "null" &&
-        this.password !== "null"
+        this.firstName !== "" &&
+        this.lastName !== "" &&
+        this.username !== "" &&
+        this.email !== "" &&
+        this.password !== ""
       ) {
         this.error = false
         this.errorMsg = ""
@@ -86,9 +87,11 @@ export default {
           username: this.username,
           email: this.email
         })
+        console.log("before push")
         this.$router.push({
           name: 'Home'
         })
+        console.log("after push")
         return;
       }
       this.error=true
